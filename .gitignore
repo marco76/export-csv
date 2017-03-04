@@ -1,5 +1,8 @@
 node_modules/
-dist/
+build/**/*
+package/
 *.d.ts
 *.log
 *.tgz
+.DS_*
+settings.json

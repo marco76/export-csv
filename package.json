@@ -1,12 +1,14 @@
 {
   "name": "@molteni/export-csv",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Quick and simply export JSON and tables data to CSV",
   "main": "build/export-csv",
-  "types": "build/src/exportToCSV.d.ts", 
+  "types": "index.d.ts", 
    "files": [
-    "build/export-csv.js",
-    "build/src/"
+     "README.md",
+     "build/export-csv.js",
+     "build/dist/",
+     "index.d.ts"
   ],
   "scripts": {
     "build": "webpack",
@@ -37,6 +39,10 @@
      "extract-text-webpack-plugin": "^2.0.0" ,
     "webpack-build-notifier": "^0.1.13"
   },
-  "author": "Marco Molteni",
+  "author": {
+    "name": "Marco Molteni",
+    "email": "moltenma@gmail.com",
+    "url": "http://javaee.ch"
+  },
   "license": "ISC"
 }

@@ -2,9 +2,11 @@
 	"compilerOptions": {
 		"declaration": true,
 		"target": "es5",
-		"noImplicitAny": false
+		"noImplicitAny": false,
+        "outDir": "dist"        
 	},
 	"files": [
-		"src/exportToCSV.ts"
+		"src/exportToCSV.ts",
+		"index.d.ts"
 	]
 }
