@@ -4,11 +4,11 @@ export class ExportToCSV {
 
     }
 
-    exportAllToCSV(JSONListItemsToPublish : any, fileName : string) {
+    exportAllToCSV(JSONListItemsToPublish : any[], fileName : string) {
         return this.exportColumnsToCSV(JSONListItemsToPublish, fileName, null);
     }
 
-    exportColumnsToCSV(JSONListItemsToPublish : any, fileName : string, columns : string[]) {
+    exportColumnsToCSV(JSONListItemsToPublish : any[], fileName : string, columns : string[]) {
         let self = this;
 
         const items = JSONListItemsToPublish;

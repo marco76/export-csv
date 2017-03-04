@@ -1,11 +1,19 @@
 {
-  "name": "export-csv",
+  "name": "@molteni/export-csv",
   "version": "0.0.1",
   "description": "Quick and simply export JSON and tables data to CSV",
-  "main": "dist/exportToCSV.js",
-  "types": "main.d.ts", 
+  "main": "build/export-csv",
+  "types": "build/src/exportToCSV.d.ts", 
+   "files": [
+    "build/export-csv.js",
+    "build/src/"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "build-prod": "webpack -p",
+    "deploy": "npm run build && sh deploy.sh ",
+    "watch": "webpack --watch --watch-poll ",
+    "prepublish": "webpack -p"
   },
   "keywords": [
     "csv",
@@ -13,6 +21,22 @@
     "angular",
     "export"
   ],
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/marco76/export-csv"
+},
+  "typescript": {
+    "definition": "index.d.ts"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "typescript": "~2.2.1",
+    "ts-loader": "^2.0.0",
+     "webpack": "^2.2.0",
+     "extract-text-webpack-plugin": "^2.0.0" ,
+    "webpack-build-notifier": "^0.1.13"
+  },
   "author": "Marco Molteni",
   "license": "ISC"
 }
