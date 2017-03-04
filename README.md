@@ -1,5 +1,12 @@
 # export-csv
 
+## Blog - article
+http://javaee.ch/2017/03/05/angular-and-javascript-export-your-data-to-csv-using-typescript/
+![Image of export](http://javaee.ch/wp-content/uploads/2017/03/excel.png)
+
+## Example
+http://angular.cafe
+
 ## Goal - Export your web table to Excel in a click
 Many js applications show tables and data. Very often the business users need the possibility to export their data in excel.
 Most of the time a simple export (no server required) is enough.
