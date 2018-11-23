@@ -1,12 +1,19 @@
 {
 	"compilerOptions": {
-		"declaration": true,
 		"target": "es5",
-		"noImplicitAny": false,
-        "outDir": "dist"        
+		"module": "commonjs",
+		"declaration": true,
+		"outDir": "./dist",
+		"strict": true
 	},
-	"files": [
-		"src/exportToCSV.ts",
-		"index.d.ts"
-	]
+	"exclude": [
+		"node_modules",
+		"dist/",
+		"test/"
+	],
+	"paths": {
+		"*": [
+			"typings/*"
+		]
+	}
 }

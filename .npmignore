@@ -1,7 +1,6 @@
-node_modules/
-*.d.ts
-*.log
+.idea/
+.vscode/
 *.tgz
-
-!index.d.ts
-!index.ref.d.ts
+tsconfig.json
+src
+doc/

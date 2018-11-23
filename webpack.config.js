@@ -24,13 +24,13 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loader: 'ts-loader'
+        use: 'ts-loader'
       },
       {
         test: /\.p?css$/,
         use: ExtractTextPlugin.extract({
-          fallbackLoader: "style-loader",
-          loader: "css-loader?importLoaders=1,url=false!postcss-loader"
+          fallback: "style-loader",
+          use: "css-loader?importLoaders=1,url=false!postcss-loader"
         })
       }
     ]
