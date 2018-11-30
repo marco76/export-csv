@@ -1,1 +1,1 @@
-export { ExportToCSV } from './ExportToCSV'
+export { ExportToCSV } from './exportToCSV'
