@@ -1,7 +1,6 @@
 export class ExportToCSV {
 
     constructor() {
-
     }
 
     exportAllToCSV(JSONListItemsToPublish: any[], fileName: string) {
@@ -22,7 +21,7 @@ export class ExportToCSV {
 
             for ( let keyId = 0; keyId < keys.length; keyId++) {
 
-                if (!columns) {
+                if (!columns || columns.length === 0) {
                     csvRow[keys[keyId]] = items[i][keys[keyId]];
                 } else if (columns.indexOf(keys[keyId]) > -1) {
                     csvRow[keys[keyId]] = items[i][keys[keyId]];
@@ -46,17 +45,12 @@ export class ExportToCSV {
         // we add the BOF for UTF-8, Excel requires this information to show chars with accents etc.
         let blob = new Blob([new Uint8Array([0xEF, 0xBB, 0xBF]), data], {type: format});
 
-        if (window.navigator.msSaveOrOpenBlob) {
-            window.navigator.msSaveBlob(blob, filename);
-        }
-        else {
-            let elem = window.document.createElement('a');
+           let elem = window.document.createElement('a');
             elem.href = window.URL.createObjectURL(blob);
             elem.download = filename;
             document.body.appendChild(elem);
             elem.click();
             document.body.removeChild(elem);
-        }
     }
 
     static download(filename: string, data: any) {
