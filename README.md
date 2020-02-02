@@ -1,8 +1,8 @@
 # export-csv
 
 ## Blog - article
-http://javaee.ch/2017/03/05/angular-and-javascript-export-your-data-to-csv-using-typescript/
-![Image of export](http://javaee.ch/assets/img/uploads/2017/03/excel.png)
+https://marco.dev/2017/03/05/angular-and-javascript-export-your-data-to-csv-using-typescript/
+![Image of export](https://marco.dev/assets/img/uploads/2017/03/excel.png)
 
 ## Example
 
