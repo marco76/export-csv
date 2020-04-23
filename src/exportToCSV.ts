@@ -35,8 +35,8 @@ export class ExportToCSV {
         const replace = (key: string, value: string) => value === null ? '' : value;
         const header = Object.keys(arrayToPublish[0]);
 
-        let csv = arrayToPublish.map(row => header.map(fieldName => JSON.stringify(row[fieldName], replace)).join(';'));
-        csv.unshift(header.join(';'));
+        let csv = arrayToPublish.map(row => header.map(fieldName => JSON.stringify(row[fieldName], replace)).join(','));
+        csv.unshift(header.join(','));
         let data = csv.join('\r\n');
         ExportToCSV.download(fileName, data);
     }
@@ -56,6 +56,6 @@ export class ExportToCSV {
     static download(filename: string, data: any) {
         // the document has to be compatible with Excel, we export in UTF-8
         // previously we saved only using 'text/csv'
-        ExportToCSV.downloadFile(filename, data, 'text/plain;charset=utf-8');
+        ExportToCSV.downloadFile(filename, data, 'text/csv;charset=utf-8');
     }
 }
